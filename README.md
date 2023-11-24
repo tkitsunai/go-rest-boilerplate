@@ -1,3 +1,5 @@
+[![Go Report Card](https://goreportcard.com/badge/github.com/tkitsunai/go-rest-boilerplate)](https://goreportcard.com/report/github.com/tkitsunai/go-rest-boilerplate)
+
 # go-rest-boilerplate
 
 A greatest starting point for building RESTful APIs in Go.
