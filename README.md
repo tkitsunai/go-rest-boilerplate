@@ -14,11 +14,31 @@ The implementation follows Clean Architecture principles as described by Uncle B
 - Testing using testify
 - CI using GitHub Actions workflow
 - Releaser using goreleaser
+- hot reloading using air
+
+## Running
+
+### running using "air"
+
+before running, setup air
+```bash
+make setupAir
+```
+or
+```bash
+go install github.com/cosmtrek/air@latest
+```
+
+### simple running
+
+```bash
+make run
+```
 
 ## Testing
 
 ```bash
-go test -v ./...
+make test
 ```
 
 ## Environment Variables
