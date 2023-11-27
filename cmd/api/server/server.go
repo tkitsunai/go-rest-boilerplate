@@ -1,28 +1,29 @@
-package rest
+package server
 
 import (
-	"fmt"
 	"github.com/gofiber/fiber/v2"
 	"github.com/tkitsunai/go-rest-boilerplate/internal/config"
+	"github.com/tkitsunai/go-rest-boilerplate/internal/rest/routes"
+	"net"
 )
 
-type Server struct {
+type App struct {
 	engine *fiber.App
 	port   string
 }
 
-func New() *Server {
+func NewApp() *App {
 	app := fiber.New(fiber.Config{
 		Prefork: true,
 	})
-	s := &Server{
+	s := &App{
 		engine: app,
 		port:   config.Get().Port,
 	}
-	s.registerRoutes()
+	routes.SetupRoutes(s.engine)
 	return s
 }
 
-func (s *Server) Run() error {
-	return s.engine.Listen(fmt.Sprintf(":%s", s.port))
+func (s *App) Run() error {
+	return s.engine.Listen(net.JoinHostPort("", s.port))
 }

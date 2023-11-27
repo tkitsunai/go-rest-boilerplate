@@ -1,16 +1,12 @@
-/*
-Copyright © 2023 NAME HERE <EMAIL ADDRESS>
-*/
 package cmd
 
 import (
-	"github.com/tkitsunai/go-rest-boilerplate/internal/rest"
+	"github.com/tkitsunai/go-rest-boilerplate/cmd/api/server"
 	"os"
 
 	"github.com/spf13/cobra"
 )
 
-// rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "go-rest-boilerplate",
 	Short: "A brief description of your application",
@@ -19,9 +15,6 @@ examples and usage of using your application. For example:
 Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
-	// Uncomment the following line if your bare application
-	// has an action associated with it:
-	// Run: func(cmd *cobra.Command, args []string) { },
 	RunE: func(cmd *cobra.Command, args []string) error {
 		return start()
 	},
@@ -37,8 +30,5 @@ func Execute() {
 }
 
 func start() error {
-	return rest.New().Run()
-}
-
-func init() {
+	return server.NewApp().Run()
 }
