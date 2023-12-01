@@ -14,7 +14,9 @@ type App struct {
 
 func NewApp() *App {
 	app := fiber.New(fiber.Config{
-		Prefork: true,
+		// Pre-fork mode is thread control of the entire application, not just the thread that handles Fiber, becomes hard.
+		// If pre-fork mode is turned true, it needs to be considered throughout the application.
+		Prefork: false,
 	})
 	s := &App{
 		engine: app,
