@@ -4,7 +4,7 @@ go 1.22.0
 
 require (
 	github.com/fukata/golang-stats-api-handler v1.0.0
-	github.com/gofiber/fiber/v2 v2.52.2
+	github.com/gofiber/fiber/v2 v2.52.4
 	github.com/rs/zerolog v1.32.0
 	github.com/samber/do v1.6.0
 	github.com/spf13/cobra v1.8.0

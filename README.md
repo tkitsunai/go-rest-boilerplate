@@ -20,14 +20,15 @@ While this project lacks most implementation code, it adheres to certain princip
 
 ## Features
 
-- [x] Configuration using viper
-- [x] CLI features using cobra
-- [x] Structured logging using zerolog
-- [x] Web framework using fiber
-- [x] Testing using testify
+- [x] Configuration using [spf13/viper](https://github.com/spf13/viper)
+- [x] CLI features using [spf13/cobra](https://github.com/spf13/cobra)
+- [x] Structured logging using [rs/zerolog](https://github.com/rs/zerolog)
+- [x] Web framework using [gofiber/fiber](https://github.com/gofiber/fiber/)
+- [x] Testing using [stretchr/testify](https://github.com/stretchr/testify)
 - [x] CI using GitHub Actions workflow
-- [x] Releaser using goreleaser
-- [x] hot reloading using air
+- [x] Releaser using [GoReleaser](https://goreleaser.com/)
+- [x] hot reloading using [Air](https://github.com/cosmtrek/air)
+- [x] Dependency Inject using [samber/do](https://github.com/samber/do)
 
 ### Inline tool feature
 
